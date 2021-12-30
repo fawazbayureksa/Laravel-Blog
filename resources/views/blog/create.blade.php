@@ -48,6 +48,7 @@
 							</div>
 							<button type="submit" class="btn btn-primary btn-md">Simpan</button>
 							<button type="submit" class="btn btn-success btn-md">Refresh</button>
+								<a href="{{route('blog.index')}}" class="btn btn-warning btn-md">Kembali</a>
 						</form>
 					</div>			
 				</div>		

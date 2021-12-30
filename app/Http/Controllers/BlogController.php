@@ -28,11 +28,11 @@ class BlogController extends Controller
 
     	// Proses upload gambar
 
-    	$image = $requset->file('image');
+    	$image = $request->file('image');
     	$image->storeAs('public/blogs',$image->hashName());
     	$blog = Blog::create([
     		'image' => $image->hashName(),
-    		'title' => $request->title(),
+    		'title' => $request->title,
     		'content' => $request->content
     	]);
 
