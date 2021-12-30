@@ -9,6 +9,12 @@
 	 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 <body>
-	<h1>Tambah data</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+								
+			</div>	
+		</div>
+	</div>
 </body>
 </html>
