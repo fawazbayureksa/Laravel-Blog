@@ -24,6 +24,12 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ## Learning Laravel
 
 Membuat Create Read Update & Delete
+
+Koneksi ke storage
+```
+php artisan storage:link
+```
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
