@@ -81,4 +81,11 @@ class BlogController extends Controller
 
     	return redirect()->route('blog.index')->with(['success'=>'Data berhasil diubah']);
     } 
+    public function destroy($id){
+    	$blog = Blog::findorFail($id);
+    	Storage::disk('local')->delete('public/blogs'.$blog->image);
+    	$blog->delete();
+
+    	return redirect()->route('blog.index')->with(['success' => 'Data Berhasil Dihapus']);
+    }
 }
