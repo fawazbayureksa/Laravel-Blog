@@ -29,7 +29,7 @@
 								<tr>
 									
 									<td>
-										<img src="{{Storage::url('public/blogs').$blog->image}}" class="rounded" style="width: 150px" alt="">
+										 <img src="{{Storage::url('app/public/blogs/').$blog->image}}" class="rounded" style="width: 150px">
 									</td>
 									 <td>{{ $blog->title }}</td>
                                     <td>{!! $blog->content !!}</td>
