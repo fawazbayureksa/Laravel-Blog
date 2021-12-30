@@ -63,5 +63,6 @@
 			toaster.error('{{session('error')}}','GAGAL'); 
 		@endif
 	</script>
+	
 </body>
 </html>
