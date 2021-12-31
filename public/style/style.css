@@ -14,7 +14,7 @@ nav a.navbar-brand{
 }
 
 .card .list-group a{
-	text-decoration: none;
-	color: black;
+	/*text-decoration: none;
+	color: black;*/
 	font-weight: bold;
 }

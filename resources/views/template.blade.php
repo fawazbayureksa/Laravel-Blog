@@ -39,23 +39,9 @@
 		</div>
 	</nav>
 
-	<div class="row mt-5">
+	<div class="row mt-5 mx-auto">
 		<div class="col-md-3">
-			<div class="card border-0 rounded shadow ">
-				<div class="card-body">
-					<div class="h3">
-						Main Menu
-					</div>
-						<ul class="list-group" style="border-radius: 5px!important">
-						    <li class="list-group-item">
-						    	<a href="#" class="">DASHBOARD</a>
-						    </li>
-						</ul>
-				</div>
-				<div class="card-body">
-					
-				</div>
-			</div>
+			@include('_sidebar')
 		</div>
 			<div class="col-md-9">
 				@yield('content')

@@ -31,10 +31,10 @@
                             <td>{!! $blog->content !!}</td>
                             <td class="text-center">
                                 <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('blog.destroy', $blog->id) }}" method="POST">
-                                    <a href="{{ route('blog.edit', $blog->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                    <a href="{{ route('blog.edit', $blog->id) }}" class="btn btn-sm btn-primary mb-2">Edit</a>
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                                    <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
                                 </form>
                             </td>
 						</tr>
