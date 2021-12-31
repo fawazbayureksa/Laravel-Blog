@@ -4,7 +4,7 @@
 	<meta charset=utf-8>
 	<meta name=description content="">
 	<meta name=viewport content="width=device-width, initial-scale=1">
-	<title>@yield('title')REXX CODE - Blog Pribadi</title>
+	<title>@yield('title')</title>
 	<link rel="stylesheet" type="text/css" href="{{asset('style/bootstrap/dist/css/bootstrap.min.css')}}">
 	 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 	 <link rel="stylesheet" type="text/css" href="{{asset('style/style.css')}}">
@@ -39,15 +39,17 @@
 		</div>
 	</nav>
 
-	<div class="row mt-5 mx-auto">
-		<div class="col-md-3">
-			@include('_sidebar')
-		</div>
-			<div class="col-md-9">
-				@yield('content')
+	<section class="isi">
+		<div class="row mx-auto">
+			<div class="col-md-3">
+				@include('_sidebar')
+			</div>
+				<div class="col-md-9">
+					@yield('content')
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 	<!-- <div class="container mt-3">
 		
 		<h1>Hello World</h1>
