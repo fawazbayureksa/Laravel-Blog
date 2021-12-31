@@ -11,7 +11,7 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+	<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light shadow">
 		<div class="container">
 			<a href="#" class="navbar-brand">REXXCODE</a>
 			
@@ -31,7 +31,6 @@
 				    <li class="nav-item">
 						<a href="#" class="nav-link" aria-current="page">Contact</a>					
 				    </li>
-
 				   <!--  <li class="nav-item">
 				    	<a href="" class="nav-link">Fawwaz Bayureksa</a>
 				    </li> -->
@@ -40,13 +39,34 @@
 		</div>
 	</nav>
 
-<!-- 	@section('content')
-
-	@endsection -->
-	<div class="container mt-3">
+	<div class="row mt-5">
+		<div class="col-md-3">
+			<div class="card border-0 rounded shadow ">
+				<div class="card-body">
+					<div class="h3">
+						Main Menu
+					</div>
+						<ul class="list-group" style="border-radius: 5px!important">
+						    <li class="list-group-item">
+						    	<a href="#" class="">DASHBOARD</a>
+						    </li>
+						</ul>
+				</div>
+				<div class="card-body">
+					
+				</div>
+			</div>
+		</div>
+			<div class="col-md-9">
+				@yield('content')
+			</div>
+		</div>
+	</div>
+	<!-- <div class="container mt-3">
 		
 		<h1>Hello World</h1>
-	</div>
+	</div> -->
+	
 
 	<script src="{{asset('style/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 	<script src="">
