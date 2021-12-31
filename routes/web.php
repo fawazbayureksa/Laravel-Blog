@@ -21,3 +21,6 @@ Route::get('/', function () {
 // Resouece memudah kan untuk membuat CRUD ketika menggunakan route
 // route tersebut sudah complete, mulai dari index, create, store, edit, pdate dan destroy
 Route::resource('blog',BlogController::class);
+Route::get('/template', function(){
+	return view('template');
+});
