@@ -3,6 +3,9 @@ body{
 	background: lightgray;
 }
 
+nav .navbar{
+background: #ffc107;
+}
 
 nav li a.nav-link{
 
