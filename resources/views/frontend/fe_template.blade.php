@@ -14,6 +14,8 @@
 
 
 	@include('components._navbar')
+	@include('components._jumbotron')
+
 	<section class="isi">
 		<div class="row justify-content-center mx-auto">
 					@yield('content')
