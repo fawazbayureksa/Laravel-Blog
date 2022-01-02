@@ -31,9 +31,6 @@
 				    <li class="nav-item">
 						<a href="#" class="nav-link" aria-current="page">Contact</a>					
 				    </li>
-				   <!--  <li class="nav-item">
-				    	<a href="" class="nav-link">Fawwaz Bayureksa</a>
-				    </li> -->
 				</ul>
 			</div>
 		</div>
@@ -41,7 +38,7 @@
 
 	<section class="isi">
 		<div class="row mx-auto">
-			<div class="col-md-3">
+			<div class="col-md-3 mb-3">
 				@include('_sidebar')
 			</div>
 				<div class="col-md-9">
