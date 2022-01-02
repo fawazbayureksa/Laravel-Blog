@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-warning shadow">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-warning shadow ">
 	<div class="container">
 		<a href="/" class="navbar-brand">REXXCODE</a>
 		

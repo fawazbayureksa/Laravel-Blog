@@ -23,5 +23,8 @@ nav a.navbar-brand{
 }
 
 .isi{
-	margin-top:40px; 
+	padding-top:80px; 
+}
+.article{
+	padding-top:10px; 
 }
