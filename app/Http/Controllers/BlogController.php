@@ -10,8 +10,8 @@ class BlogController extends Controller
     //Perintah menampilkan data 
     public function index(){
     	$blogs = Blog::latest()->paginate(6);
-    	// return view('blog/index',compact('blogs'));
-        return view('frontend/sub/article',compact('blogs'));
+    	return view('blog/index',compact('blogs'));
+        // return view('frontend/sub/article',compact('blogs'));
     }
 
     // link mengarah halaman tambah data
