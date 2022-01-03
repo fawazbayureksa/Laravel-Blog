@@ -2,31 +2,17 @@
 
 @section('content')
 
+@foreach($blogs as $blog)
 <div class="col-md-4">
-	<div class="card rounded-2 shadow-md">
+	<div class="card rounded-2 shadow-md h-5">
 		<div class="card-body">
-			<img src="" alt="" width="300">
-			<h3>Title</h3>
-			<p>Body</p>
+			<div class="text-center">
+				<img src="{{Storage::url('public/blogs/').$blog->image}}" class="rounded" width="300">
+			</div>
+			<h3>{{$blog->title}}</h3>
+			{{$blog->content}}
 		</div>
 	</div>
 </div>
-<div class="col-md-4">
-	<div class="card rounded-2 shadow-md">
-		<div class="card-body">
-			<img src="" alt="" width="300">
-			<h3>Title</h3>
-			<p>Body</p>
-		</div>
-	</div>
-</div>
-<div class="col-md-4 rounded-0 shadow-md">
-	<div class="card">
-		<div class="card-body">
-			<img src="" alt="" width="300">
-			<h3>Title</h3>
-			<p>Body</p>
-		</div>
-	</div>
-</div>
+@endforeach
 @endsection

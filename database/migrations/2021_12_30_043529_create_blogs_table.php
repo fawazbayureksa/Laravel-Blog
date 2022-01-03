@@ -20,8 +20,17 @@ class CreateBlogsTable extends Migration
             // $table->string('author');
             $table->string('content');
             $table->timestamps();
+
+        // image 
+        // title
+        // slug
+        // author
+        // body
+        // timestamp
         });
     }
+
+
 
     /**
      * Reverse the migrations.
