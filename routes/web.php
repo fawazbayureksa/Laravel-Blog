@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +24,10 @@ Route::resource('blog',BlogController::class);
 // 	return view('template');
 // });
 
-Route::get("/", function(){
-	return view('frontend.sub.article');
-});
+// Route::get("/", function(){
+// 	return view('frontend.sub.article');
+// });
+
+Route::get('/','PostController@index');
+Route::get('/article/{id}','PostController@show');
+

@@ -30,6 +30,14 @@ Koneksi ke storage
 php artisan storage:link
 ```
 
+Bisa di buat untuk menjalankan Models Database 
+```
+php artisan tinker
+```
+
+Blade Escape Character 
+Agar tag html dalam text bisa dijalankan
+{!! variabel !!}
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

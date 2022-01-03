@@ -1,16 +1,18 @@
+
 @extends('frontend.fe_template')
 
 @section('content')
 
-@foreach($blogs as $blog)
-<div class="col-md-4">
+@foreach($posts as $post)
+<div class="col-md-8">
 	<div class="card rounded-2 shadow-md h-5">
 		<div class="card-body">
-			<div class="text-center">
-				<img src="{{Storage::url('public/blogs/').$blog->image}}" class="rounded" width="300">
-			</div>
-			<h3>{{$blog->title}}</h3>
-			{{$blog->content}}
+		<!-- 	<div class="text-center">
+				<img src="{{Storage::url('public/blogs/').$post->image}}" class="rounded" width="300">
+			</div> -->
+			<h3>{{$post->title}}</h3>
+			{{$post->excerpt}}
+			<a href="/article/{{$post->id}}"><i>Read more</i></a>	
 		</div>
 	</div>
 </div>
