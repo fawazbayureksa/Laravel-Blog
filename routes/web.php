@@ -29,5 +29,5 @@ Route::resource('blog',BlogController::class);
 // });
 
 Route::get('/','PostController@index');
-Route::get('/article/{id}','PostController@show');
+Route::get('/article/{post:slug}','PostController@show');
 

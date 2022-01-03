@@ -16,9 +16,9 @@ class PostController extends Controller
 
     }
 
-    public function show($id)
+    // Route Model Binding 
+    public function show(Post $post)
     {
-    	$post = Post::find($id);
 
     	return view('frontend/sub/content',['post' => $post]);
     }

@@ -12,7 +12,7 @@
 			</div> -->
 			<h3>{{$post->title}}</h3>
 			{{$post->excerpt}}
-			<a href="/article/{{$post->id}}"><i>Read more</i></a>	
+			<a href="/article/{{$post->slug}}"><i>Read more</i></a>	
 		</div>
 	</div>
 </div>
