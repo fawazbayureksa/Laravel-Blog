@@ -20,14 +20,6 @@ use Illuminate\Support\Facades\Route;
 // route tersebut sudah complete, mulai dari index, create, store, edit, pdate dan destroy
 Route::resource('blog',BlogController::class);
 
-// Route::get('/template', function(){
-// 	return view('template');
-// });
-
-// Route::get("/", function(){
-// 	return view('frontend.sub.article');
-// });
-
 Route::get('/','PostController@index');
 Route::get('/article/{post:slug}','PostController@show');
 

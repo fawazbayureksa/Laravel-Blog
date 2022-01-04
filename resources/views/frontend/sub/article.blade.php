@@ -2,7 +2,7 @@
 @extends('frontend.fe_template')
 
 @section('content')
-
+@include('components._jumbotron')
 @foreach($posts as $post)
 <div class="col-md-8">
 	<div class="card rounded-2 shadow-md h-5">
