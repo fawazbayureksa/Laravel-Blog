@@ -28,3 +28,7 @@ nav a.navbar-brand{
 .article{
 	padding-top:10px; 
 }
+
+.bg-jumbotron {
+	background-color: red;
+}
