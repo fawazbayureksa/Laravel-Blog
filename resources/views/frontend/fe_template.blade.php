@@ -14,12 +14,14 @@
 
 
 	@include('components._navbar')
-	<section class="article pt-5">
-		<div class="row justify-content-center mx-auto">
+	<section class="article py-5">
+		<div class="mx-auto">
 					@yield('content')
 			</div>
 		</div>
 	</section>
+	@include('components._footer')
+	
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="{{asset('style/bootstrap/dist/js/bootstrap.min.js')}}"></script>
