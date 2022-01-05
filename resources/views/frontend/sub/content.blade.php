@@ -1,4 +1,5 @@
 @extends('frontend.fe_template')
+@section('title','REXXCODE')
 @section('content')
 <div class="container-fluid mt-5">
 	<div class="row justify-content-start">
