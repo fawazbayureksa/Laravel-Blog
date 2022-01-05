@@ -15,7 +15,7 @@
 	<div class="row">
 		<div class="col-md-5">
 			<h4>REXXCODE</h4>
-			<p>Share anything you know</p>
+			<p>Share Anything You Know</p>
 		</div>
 	</div>
 

@@ -4,6 +4,8 @@
 		background-color: #DBD76B;
 		/*background-color: #F0E68C;*/
 		padding:80px 80px;
+		margin-top: -10px;
+
 	}
 	.text {
 
@@ -24,7 +26,7 @@
 			<div class="col-md-3">
 				<div class="card rounded-2 shadow-md text-center">
 					<div class="card-body">
-						<h3>News</h3>
+						<h3>Article</h3>
 					</div>
 				</div>
 			</div>

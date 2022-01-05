@@ -1,6 +1,8 @@
 
 @extends('frontend.fe_template')
 
+@section('title','REXXCODE - Share Anything You Know');
+
 @section('content')
 @include('components._jumbotron')
 <div class="container">
