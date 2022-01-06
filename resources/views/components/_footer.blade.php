@@ -10,6 +10,8 @@
 	}
 	 i.fab {
       font-size: 2em;
+      color: #333;
+      margin-right:10px;
     }
 </style>
 <div class="footer bg-warning">
@@ -19,11 +21,13 @@
 		<div class="col-md-5">
 			<h2>REXXCODE</h2>
 			<p>Share Anything You Know</p>
-			<i class="fab fa-facebook"></i>
-			<i class="fab fa-instagram"></i>
-			<i class="fab fa-linkedin"></i>
-			<i class="fab fa-twitter"></i>
-			<i class="fab fa-github"></i>
+			<div class="">
+				<a href="#"><i class="fab fa-facebook"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+				<a href="#"><i class="fab fa-linkedin"></i></a>
+				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="#"><i class="fab fa-github"></i></a>
+			</div>
 		</div>
 	</div>
 
