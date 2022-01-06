@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 // Resouece memudah kan untuk membuat CRUD ketika menggunakan route
 // route tersebut sudah complete, mulai dari index, create, store, edit, pdate dan destroy
-Route::resource('blog',BlogController::class);
+// Route::resource('blog',BlogController::class);
 Route::get('/','PostController@index');
 Route::get('/article/{post:slug}','PostController@show');
-
+Route::get('/blog', 'PostController@tampil');

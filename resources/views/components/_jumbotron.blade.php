@@ -28,7 +28,7 @@
 			<div class="col-md-3">
 				<div class="card rounded-2 shadow-md text-center">
 					<div class="card-body">
-						<h3>Article</h3>
+						<h3>Articles</h3>
 					</div>
 				</div>
 			</div>
@@ -58,6 +58,6 @@
 
 <div class="text py-3">
 	<div class="display-6 container">
-		Article
+		Articles
 	</div>
 </div>

@@ -10,12 +10,16 @@ class PostController extends Controller
 
     public function index()
     {
-    	$posts = Post::all();
-
+        $posts = Post::all();
     	return view('frontend/sub/article',compact('posts'));
-
     }
 
+    public function tampil(){
+
+    	$posts = Post::all();
+        return view('blog/index',compact('posts'));
+
+    }
     // Route Model Binding 
     public function show(Post $post)
     {

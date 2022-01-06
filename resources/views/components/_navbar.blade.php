@@ -1,4 +1,9 @@
-
+<style type="text/css">
+	a.navbar-brand{
+		font-weight: bold;
+		font-size: 32px;
+	}
+</style>
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-warning shadow">
 	<div class="container">

@@ -3,7 +3,6 @@
 	.footer{
 		padding-top:80px;
 		padding-bottom:30px;
-
 	}
 	.bold{
 		font-weight: bold;
@@ -22,11 +21,11 @@
 				<h2 class="">REXXCODE</h2>
 				<p class="">Share Anything You Know</p>
 				<div class="">
-					<a href="https://www.facebook.com/fawaz.bayureksaa/"><i class="fab fa-facebook"></i></a>
-					<a href="https://instagram.com/fawazbayureksa_"><i class="fab fa-instagram"></i></a>
-					<a href="https://www.linkedin.com/in/fawwaz-bayureksa-406b891a3/"><i class="fab fa-linkedin"></i></a>
-					<a href="https://twitter.com/FawazBayureksa"><i class="fab fa-twitter"></i></a>
-					<a href="https://github.com/fawazbayureksa"><i class="fab fa-github"></i></a>
+					<a href="https://www.facebook.com/fawaz.bayureksaa/" target="_blank"><i class="fab fa-facebook"></i></a>
+					<a href="https://instagram.com/fawazbayureksa_" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/in/fawwaz-bayureksa-406b891a3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+					<a href="https://twitter.com/FawazBayureksa" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="https://github.com/fawazbayureksa" target="_blank"><i class="fab fa-github"></i></a>
 				</div>
 			</div>
 		</div>

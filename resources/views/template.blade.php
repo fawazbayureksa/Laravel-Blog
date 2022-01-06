@@ -5,9 +5,11 @@
 	<meta name=description content="">
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title>@yield('title')</title>
+	<link rel="stylesheet" type="text/css" href="{{asset('fontawesome/css/all.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('fontawesome/css/solid.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('style/bootstrap/dist/css/bootstrap.min.css')}}">
-	 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-	 <link rel="stylesheet" type="text/css" href="{{asset('style/style.css')}}">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('style/style.css')}}">
 </head>
 <body>
 
