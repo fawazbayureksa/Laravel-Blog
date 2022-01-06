@@ -22,11 +22,11 @@
 			<h2>REXXCODE</h2>
 			<p>Share Anything You Know</p>
 			<div class="">
-				<a href="#"><i class="fab fa-facebook"></i></a>
-				<a href="#"><i class="fab fa-instagram"></i></a>
-				<a href="#"><i class="fab fa-linkedin"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
-				<a href="#"><i class="fab fa-github"></i></a>
+				<a href="https://www.facebook.com/fawaz.bayureksaa/"><i class="fab fa-facebook"></i></a>
+				<a href="https://instagram.com/fawazbayureksa_"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.linkedin.com/in/fawwaz-bayureksa-406b891a3/"><i class="fab fa-linkedin"></i></a>
+				<a href="https://twitter.com/FawazBayureksa"><i class="fab fa-twitter"></i></a>
+				<a href="https://github.com/fawazbayureksa"><i class="fab fa-github"></i></a>
 			</div>
 		</div>
 	</div>
