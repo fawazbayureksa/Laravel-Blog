@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +22,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','PostController@index');
 Route::get('/article/{post:slug}','PostController@show');
 Route::get('/blog', 'PostController@tampil');
+
+//Contoh Route Model Binding
+Route::get('categories/{category:slug}',function(Category $category) {
+
+	return view('frontend/sub/category', [
+		'title' => $category->name,
+		'posts' => $category->posts,
+		'category' => $category->name
+
+	]);
+});

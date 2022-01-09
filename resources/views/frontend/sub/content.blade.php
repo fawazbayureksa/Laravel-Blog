@@ -8,6 +8,7 @@
 				<div class="card-body">
 					
 					<h3>{{$post->title}}</h3>
+					<p>Author : Fawwaz Bayureksa in <a href="/categories/{{$post->category->slug}}" >{{$post->category->name}}</a> </p>
 					<p>
 						{!!$post->body!!}
 					</p>
@@ -20,7 +21,7 @@
 				<div class="card-body">
 					<div class="list-group">
 					    <a href="#" class="list-group-item list-group-item-action">Article</a>
-					    <a href="{{route('blog.index')}}" class="list-group-item list-group-item-action">Blog</a>
+					    <a href="#" class="list-group-item list-group-item-action">Blog</a>
 					    <a href="#" class="list-group-item list-group-item-action">Code</a>
 					    <a href="#" class="list-group-item list-group-item-action">Error</a>
 					</div>
