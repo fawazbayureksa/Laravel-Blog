@@ -13,6 +13,7 @@ class Category extends Model
 
     public function posts()
     {
+    	// satu kategory bisa dimiliki banyak postingan
     	return $this->hasMany(Post::class);
     }
 }
