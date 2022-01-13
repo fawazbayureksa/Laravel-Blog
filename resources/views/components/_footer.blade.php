@@ -13,6 +13,9 @@
       color: #444;
       margin-right:10px;
     }
+    i.fab:hover{
+    	color: white;
+    }
 </style>
 <div class="footer bg-warning">
 	<div class="container">

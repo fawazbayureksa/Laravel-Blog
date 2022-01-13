@@ -20,6 +20,7 @@
 						<a href="/article/{{$post->slug}}"><i>Read more</i></a>	
 					</div>
 				</div>
+					<a href="/" class="">Kembali</a>
 			</div>
 		@endforeach
 	</div>
