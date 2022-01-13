@@ -10,7 +10,12 @@ class PostController extends Controller
 
     public function index()
     {
+        // Menampilkan data sesuai urutan id 
         $posts = Post::all();
+
+        // Menampilkan data dari yang terbaru
+        // $posts = Post::latest()->get();
+
     	return view('frontend/sub/article',compact('posts'));
     }
 
@@ -23,9 +28,7 @@ class PostController extends Controller
     // Route Model Binding 
     public function show(Post $post)
     {
-
     	return view('frontend/sub/content',['post' => $post]);
     }
-
 
 }

@@ -6,7 +6,7 @@
 @section('content')
 <!-- @include('components._jumbotron') -->
 <div class="container">
-	<h3 class="mb-5 mt-4">Category {{$category}}</h3>
+	<h3 class="mb-5 mt-4">Category by Author </h3>
 	<div class="row justify-content-start">
 		@foreach($posts as $post)
 			<div class="col-md-4">
@@ -16,7 +16,10 @@
 							<img src="{{Storage::url('public/blogs/').$post->image}}" class="rounded" width="300">
 						</div> -->
 						<h3>{{$post->title}}</h3>
-						<p>Author : <a href="/authors/{{$post->author->username}}" class="text-decoration-none">{{$post->author->name}}</a> in <a href="/categories/{{$post->category->slug}}" class="text-decoration-none">{{$post->category->name}}</a><p>
+						<p>Author : 
+						<a href="/authors/{{$post->author->username}}" class="text-decoration-none">{{$post->author->name}}</a> in 
+						<a href="/categories/{{$post->category->slug}}" class="text-decoration-none"
+						></a></a>
 						{{$post->excerpt}}
 						<a href="/article/{{$post->slug}}"><i>Read more</i></a>	
 					</div>

@@ -17,5 +17,9 @@ class CategorySeeder extends Seeder
         	'name' => 'Code',
         	'slug' => 'code'
         ]);
+        DB::table('categories')->insert([
+            'name' => 'Article',
+            'slug' => 'article'
+        ]);
     }
 }
