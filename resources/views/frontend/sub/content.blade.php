@@ -1,3 +1,4 @@
+
 @extends('frontend.fe_template')
 @section('title','REXXCODE')
 @section('content')
@@ -8,11 +9,11 @@
 				<div class="card-body">
 					
 					<h3>{{$post->title}}</h3>
-					<p>Author : Fawwaz Bayureksa in <a href="/categories/{{$post->category->slug}}" >{{$post->category->name}}</a> </p>
+					<p>Author : <a href="#" class="text-decoration-none">{{$post->user->name}}</a>  in <a class="text-decoration-none" href="/categories/{{$post->category->slug}}" >{{$post->category->name}}</a> </p>
 					<p>
 						{!!$post->body!!}
 					</p>
-					<a href="/">Kembali</a>
+					<a href="/" class="text-decoration-none">Kembali</a>
 				</div>
 			</div>
 		</div>
