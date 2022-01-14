@@ -22,6 +22,7 @@
 							<th>Content</th>
 							<th>Act</th> -->
 							<!-- Post Controller -->
+							<th>No</th>
 							<th>Title</th>
 							<th>Slug</th>
 							<th>Experct</th>
@@ -32,9 +33,9 @@
 					<tbody>
 						@forelse($posts as $post)
 						<tr>
-				
-							 <td>{{ $post->title }}</td>
-							 <td>{{ $post->slug }}</td>
+							<td>{{$loop->iteration}}</td>
+							<td>{{ $post->title }}</td>
+							<td>{{ $post->slug }}</td>
                             <td>{!! $post->excerpt !!}</td>
                             <td>{!! $post->body !!}</td>
                          

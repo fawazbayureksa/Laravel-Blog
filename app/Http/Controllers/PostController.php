@@ -21,7 +21,7 @@ class PostController extends Controller
 
     public function tampil(){
 
-    	$posts = Post::all();
+    	$posts = Post::paginate(5);
         return view('blog/index',compact('posts'));
 
     }
