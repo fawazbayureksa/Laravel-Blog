@@ -20,8 +20,12 @@ class PostController extends Controller
     }
 
     public function tampil(){
+        
+        // untuk menampilkan semua data
+        // $posts = Post::all();
 
-    	$posts = Post::paginate(5);
+        // Menampilkan data sesuai jumlah yang diminta
+    	$posts = Post::paginate(10);
         return view('blog/index',compact('posts'));
 
     }
