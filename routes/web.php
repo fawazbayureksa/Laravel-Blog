@@ -30,6 +30,7 @@ Route::get('categories/{category:slug}','CategoryController@show');
 Route::get('authors/{author:username}', function(User $author){
 	return view('frontend/sub/article', [
 		'title' => "Postingan dari penulis : $author->name",
-		'posts' => $author->posts,
+		// load() merupakan fitur dari lazy eager loading dan digunakan di situasi seperti saat menggunakan route model binding
+		'posts' => $author->posts->load('category','author'),
 	]);
 });

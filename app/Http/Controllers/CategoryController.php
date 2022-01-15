@@ -10,7 +10,8 @@ class CategoryController extends Controller
     {
     	return view('frontend/sub/article', [
 		'title' => "Postingan dari kategori : $category->name",
-		'posts' => $category->posts,
+		// load() merupakan fitur dari lazy eager loading dan digunakan di situasi seperti saat menggunakan route model binding
+		'posts' => $category->posts->load('category','author'),
 		// 'category' => $category->name
 	]);
     }

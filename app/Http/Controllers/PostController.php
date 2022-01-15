@@ -13,7 +13,7 @@ class PostController extends Controller
         // Menampilkan data sesuai urutan id 
         // $posts = Post::all();
 
-        // menampilkan data dengan meningkatkan keoptimalan ketika melakukan relasi menggunakan fitur eager loading,diurut sesuai data yang terbaru m
+        //with() digunakan menampilkan data dengan meningkatkan keoptimalan ketika melakukan relasi menggunakan fitur laravel eager loading,diurut sesuai data yang terbaru m
         $posts = Post::with(['author','category'])->latest()->get();
 
         // "title" => "Semua Artikel"
