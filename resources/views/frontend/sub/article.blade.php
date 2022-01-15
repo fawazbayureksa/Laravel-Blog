@@ -1,6 +1,3 @@
-
-
-
 @extends('frontend.fe_template')
 
 @section('title','REXXCODE - Share Anything You Know');
@@ -8,6 +5,11 @@
 @section('content')
 @include('components._jumbotron')
 <div class="container">
+	<div class="text py-3">
+		<div class="display-6 container">
+			{{$title}}
+		</div>
+	</div>
 	<div class="row justify-content-start">
 		@foreach($posts as $post)
 			<div class="col-md-4">
@@ -24,6 +26,7 @@
 				</div>
 			</div>
 		@endforeach
+		<a href="/">Semua Postingan</a>
 	</div>
 </div>
 @endsection

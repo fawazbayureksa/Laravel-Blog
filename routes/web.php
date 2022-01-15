@@ -28,7 +28,8 @@ Route::get('/blog', 'PostController@tampil');
 Route::get('categories/{category:slug}','CategoryController@show');
 // Route Model Binding
 Route::get('authors/{author:username}', function(User $author){
-	return view('frontend/sub/author', [
+	return view('frontend/sub/article', [
+		'title' => "Postingan dari penulis : $author->name",
 		'posts' => $author->posts,
 	]);
 });

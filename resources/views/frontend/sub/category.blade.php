@@ -6,7 +6,11 @@
 @section('content')
 <!-- @include('components._jumbotron') -->
 <div class="container">
-	<h3 class="mb-5 mt-4">Category {{$category}}</h3>
+		<div class="text py-3">
+		<div class="display-6 container">
+			{{$title}}
+		</div>
+	</div>
 	<div class="row justify-content-start">
 		@foreach($posts as $post)
 			<div class="col-md-4">

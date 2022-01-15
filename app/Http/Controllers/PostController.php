@@ -13,10 +13,11 @@ class PostController extends Controller
         // Menampilkan data sesuai urutan id 
         $posts = Post::all();
 
-        // Menampilkan data dari yang terbaru
+        // "title" => "Semua Artikel"
+       // Menampilkan data dari yang terbaru
         // $posts = Post::latest()->get();
 
-    	return view('frontend/sub/article',compact('posts'));
+    	return view('frontend/sub/article',['posts' => $posts , 'title' => "Semua Artikel"]);
     }
 
     public function tampil(){

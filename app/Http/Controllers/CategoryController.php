@@ -8,10 +8,10 @@ class CategoryController extends Controller
 {
     public function show(Category $category)
     {
-    	return view('frontend/sub/category', [
-		'title' => $category->name,
+    	return view('frontend/sub/article', [
+		'title' => "Postingan dari kategori : $category->name",
 		'posts' => $category->posts,
-		'category' => $category->name
+		// 'category' => $category->name
 	]);
     }
 }

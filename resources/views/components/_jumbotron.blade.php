@@ -6,8 +6,6 @@
 		padding:80px 80px;
 		margin-top: -10px;
 		color: #333;
-
-
 	}
 	.text {
 
@@ -22,7 +20,6 @@
     <a href="#" class="btn btn-success btn-md rounded-5">Join With Us</a>
    </div>
 </div>
-
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3">
@@ -55,9 +52,3 @@
 			</div>
 		</div>
 	</div>
-
-<div class="text py-3">
-	<div class="display-6 container">
-		Articles
-	</div>
-</div>
