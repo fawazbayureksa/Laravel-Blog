@@ -11,7 +11,7 @@ class PostController extends Controller
     public function index()
     {
         // Menampilkan data sesuai urutan id 
-        $posts = Post::all();
+        $posts = Post::with(['author','category'])->all();
 
         // "title" => "Semua Artikel"
        // Menampilkan data dari yang terbaru

@@ -38,6 +38,17 @@ php artisan tinker
 Blade Escape Character 
 Agar tag html dalam text bisa dijalankan
 {!! variabel !!}
+
+
+install clockwork laravel 
+fitur yang digunakan untuk melihat query database yang berjalan di website yang kita buat
+
+```
+composer require itsgoingd/clockwork
+```
+kemudian install extension clockwork di chrome
+
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
