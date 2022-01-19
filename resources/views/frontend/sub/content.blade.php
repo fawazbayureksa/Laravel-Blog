@@ -10,6 +10,7 @@
 					
 					<h3>{{$post->title}}</h3>
 					<p>Author : <a href="#" class="text-decoration-none">{{$post->author->name}}</a>  in <a class="text-decoration-none" href="/categories/{{$post->category->slug}}" >{{$post->category->name}}</a> </p>
+					<img src="https://source.unsplash.com/1200x720/?{{$post->category->name}}" class="card-img-top py-3" alt="">
 					<p>
 						{!!$post->body!!}
 					</p>
