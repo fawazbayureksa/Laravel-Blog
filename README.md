@@ -50,6 +50,7 @@ kemudian install extension clockwork di chrome
 
 
 Function diffForHumans di laravel merupakan fungsi untuk menghitung perbedaan waktu yang di database dengan waktu sekarang 
+milik library carbon
 
 contoh
 ''
