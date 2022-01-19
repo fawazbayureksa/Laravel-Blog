@@ -23,7 +23,7 @@ class PostController extends Controller
        // Menampilkan data dari yang terbaru
         // $posts = Post::latest()->get();
 
-    	return view('frontend/sub/article',['posts' => $posts , 'title' => "Semua Artikel"]);
+    	return view('frontend/sub/article',['posts' => $posts , 'title' => 'Semua Artikel','active' => 'beranda']);
     }
 
     public function tampil(){
@@ -34,7 +34,8 @@ class PostController extends Controller
         // Menampilkan data sesuai jumlah yang diminta
     	// $posts = Post::paginate(10);
         $posts = Post::with(['category','author'])->latest()->get();
-        return view('blog/index',compact('posts'));
+
+        return view('blog/index',['posts' => $posts , 'active' => 'user']);
 
     }
     // Route Model Binding 

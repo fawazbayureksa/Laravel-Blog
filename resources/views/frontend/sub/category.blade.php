@@ -1,4 +1,10 @@
 
+<style type="text/css">
+	.card .card-title{
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+</style>
+
 @extends('frontend.fe_template')
 
 @section('title','REXXCODE - Share Anything You Know');
@@ -6,28 +12,19 @@
 @section('content')
 <!-- @include('components._jumbotron') -->
 <div class="container">
-		<div class="text py-3">
-		<div class="display-6 container">
-			{{$title}}
-		</div>
-	</div>
-	<div class="row justify-content-start">
-		@foreach($posts as $post)
+	<div class="row justify-content-start py-5">
+		@foreach($categories as $cat)
 			<div class="col-md-4">
-				<div class="card rounded-2 shadow-md h-5 mb-3">
-					<div class="card-body">
-					<!-- 	<div class="text-center">
-							<img src="{{Storage::url('public/blogs/').$post->image}}" class="rounded" width="300">
-						</div> -->
-						<h3>{{$post->title}}</h3>
-						<p>Author : <a href="/authors/{{$post->author->username}}" class="text-decoration-none">{{$post->author->name}}</a> in <a href="/categories/{{$post->category->slug}}" class="text-decoration-none">{{$post->category->name}}</a><p>
-						{{$post->excerpt}}
-						<a href="/article/{{$post->slug}}"><i>Read more</i></a>	
-					</div>
+				<a href="/categories/{{$cat->slug}}">
+				<div class="card bg-dark text-white">
+				  <img src="https://source.unsplash.com/720x720/?{{$cat->name}}" class="card-img" alt="">
+				  <div class="card-img-overlay d-flex align-items-center p-0">
+				    <h5 class="card-title flex-fill fs-3 text-center p-3"> {{$cat->name}}</h5>
+				  </div>
 				</div>
+				</a>
 			</div>
 		@endforeach
-		<a href="/" class="">Kembali</a>
 	</div>
 </div>
 @endsection

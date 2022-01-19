@@ -34,3 +34,5 @@ Route::get('authors/{author:username}', function(User $author){
 		'posts' => $author->posts->load('category','author'),
 	]);
 });
+
+Route::get('/categories','CategoryController@index');

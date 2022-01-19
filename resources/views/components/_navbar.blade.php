@@ -16,16 +16,16 @@
 	<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 			<ul class="navbar-nav ms-auto">
 			    <li class="nav-item">
-					<a href="#" class="nav-link active" aria-current="page">Blog</a>	
+					<a href="/" class="nav-link {{($active === 'beranda' ) ? 'active' : ''}}" aria-current="page">Beranda</a>	
 			    </li class="nav-item">
 			    <li>
-					<a href="#" class="nav-link active" aria-current="page">About</a>					
+					<a href="#" class="nav-link " aria-current="page">About</a>					
 			    </li>
 			    <li class="nav-item">
-					<a href="#" class="nav-link active" aria-current="page">Contact</a>					
+					<a href="/categories" class="nav-link {{($active === 'category' ) ? 'active' : ''}}" aria-current="page">Category</a>					
 			    </li>
 			    <li class="nav-item">
-					<a href="/blog" class="nav-link active" aria-current="page">User</a>					
+					<a href="/blog" class="nav-link {{($active === 'user' ) ? 'active' : ''}}" aria-current="page">User</a>					
 			    </li>
 			</ul>
 		</div>

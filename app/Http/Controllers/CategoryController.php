@@ -13,6 +13,15 @@ class CategoryController extends Controller
 		// load() merupakan fitur dari lazy eager loading dan digunakan di situasi seperti saat menggunakan route model binding
 		'posts' => $category->posts->load('category','author'),
 		// 'category' => $category->name
+		'active' => 'category',
 	]);
+
+    }
+
+	public function index()
+    {
+ 		$categories = Category::all();
+ 		$active = "category";	 		
+ 		return view('frontend/sub/category',['categories' => $categories,'active' => $active]);   	
     }
 }
