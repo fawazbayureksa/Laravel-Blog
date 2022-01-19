@@ -10,29 +10,35 @@
 			{{$title}}
 		</div>
 	</div>
-	<div class="row justify-content-start">	
 
+
+	<div class="row justify-content-start">	
 		<div class="card mb-3">
-			<img src="..." class="card-img-top" alt="">
-			<div class="card-body">
+			<!-- <div class="position-absolute px-3 py-2 bg-warning"><a class="text-decoration-none text-white" href="/categories/{{$posts[0]->category->slug}}">{{$posts[0]->category->name}}</a></div>
+ -->
+			<img src="https://source.unsplash.com/1200x720/?{{$posts[0]->category->name}}" class="card-img-top py-3" alt="">
+			<div class="card-body text-center">
 				<h3 class="card-title">{{$posts[0]->title}}</h3>
-				<p>Author : <a href="/authors/{{$posts[0]->author->username}}" class="text-decoration-none">{{$posts[0]->author->name}}</a> in <a href="/categories/{{$posts[0]->category->slug}}" class="text-decoration-none">{{$posts[0]->category->name}}</a> </p>
+				<p>Author : <a href="/authors/{{$posts[0]->author->username}}" class="text-decoration-none">{{$posts[0]->author->name}}</a> in <small class="text-muted">{{$posts[0]->created_at->diffForHumans()}}</small> </p>
 				<p class="card-text">{{$posts[0]->excerpt}}</p>
 
-				<p class="card-text"><small class="text-muted">{{$posts[0]->created_at->diffForHumans()}}</small></p>
+				<a href="/article/{{$posts[0]->slug}}" class="btn btn-primary "><i>Read more</i></a>	
 			</div>
 		</div>
 
 		@if($posts->count())
-			@foreach($posts as $post)
+		<!-- fungsi method skip(1) digunakan untuk menlwatkan postingan pertama atau posts[0] -->
+			@foreach($posts->skip(1) as $post)
 				<div class="col-md-4">
-					<div class="card rounded-2 shadow-md h-5 mb-3">
+					<div class="card rounded-2 shadow-md mb-3">
 						<div class="card-body">
+							<div class="position-absolute px-3 py-2 bg-warning"><a class="text-decoration-none text-white" href="/categories/{{$post->category->slug}}">{{$post->category->name}}</a></div>
+							<img src="https://source.unsplash.com/1080x720/?{{$post->category->name}}" class="card-img-top" >
 							<!-- <div class="text-center">
 								<img src="{{Storage::url('public/blogs/').$post->image}}" class="rounded" width="300">
 							</div> -->
 							<h3>{{$post->title}}</h3>
-							<p>Author : <a href="/authors/{{$post->author->username}}" class="text-decoration-none">{{$post->author->name}}</a> in <a href="/categories/{{$post->category->slug}}" class="text-decoration-none">{{$post->category->name}}</a> </p>
+							<p>Author : <a href="/authors/{{$post->author->username}}" class="text-decoration-none">{{$post->author->name}}</a> in <small class="text-muted">{{$posts[0]->created_at->diffForHumans()}}</small> </p>
 							{{$post->excerpt}}
 							<a href="/article/{{$post->slug}}" class="text-decoration-none"><i>Read more</i></a>	
 						</div>

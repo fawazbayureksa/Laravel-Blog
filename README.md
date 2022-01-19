@@ -53,9 +53,15 @@ Function diffForHumans di laravel merupakan fungsi untuk menghitung perbedaan wa
 milik library carbon
 
 contoh
-''
+```
 created_at->diffForHumans()
-''
+```
+
+fungsi method skip(1) digunakan untuk menlwatkan postingan pertama atau posts[0]
+
+```
+$..->skip() as $..
+```
 
 ## License
 
