@@ -13,6 +13,9 @@ class Post extends Model
 
     protected $guard = ['id'];
 
+    // agar di controller tidak harus di tulis kan Post::With([..]) untuk fungsi relasinya
+    protected $with = ['category','author'];
+
 
     public function category()
     {

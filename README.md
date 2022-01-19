@@ -49,6 +49,13 @@ composer require itsgoingd/clockwork
 kemudian install extension clockwork di chrome
 
 
+Function diffForHumans di laravel merupakan fungsi untuk menghitung perbedaan waktu yang di database dengan waktu sekarang 
+
+contoh
+''
+created_at->diffForHumans()
+''
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

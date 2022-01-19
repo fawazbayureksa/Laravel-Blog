@@ -14,7 +14,10 @@ class PostController extends Controller
         // $posts = Post::all();
 
         //with() digunakan menampilkan data dengan meningkatkan keoptimalan ketika melakukan relasi menggunakan fitur laravel eager loading,diurut sesuai data yang terbaru m
-        $posts = Post::with(['author','category'])->latest()->get();
+        // $posts = Post::with(['author','category'])->latest()->get();
+        $posts = Post::latest()->get();
+
+        // $posts = Post::with(['author','category'])->paginate(9);
 
         // "title" => "Semua Artikel"
        // Menampilkan data dari yang terbaru
