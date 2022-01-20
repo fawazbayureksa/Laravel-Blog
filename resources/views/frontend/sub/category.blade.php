@@ -15,7 +15,7 @@
 	<div class="row justify-content-start py-5">
 		@foreach($categories as $cat)
 			<div class="col-md-4">
-				<a href="/categories/{{$cat->slug}}">
+				<a href="/?category={{$cat->slug}}">
 				<div class="card bg-dark text-white">
 				  <img src="https://source.unsplash.com/720x720/?{{$cat->name}}" class="card-img" alt="">
 				  <div class="card-img-overlay d-flex align-items-center p-0">

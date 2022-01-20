@@ -18,6 +18,12 @@
 		</div>
 		<div class="col-md-5 mt-4">
 			<form action="/" method="get">
+				<!-- jika saat mencari ada category=.. buat input type hiden , untuk menyisipkan search saat berada di halaman category-->
+				@if(request('category'))
+					<input type="hidden" name="category" value="{{request('category')}}">
+				@endif
+
+
 				<div class="input-group mb-3">
 				  <input type="text" class="form-control" placeholder="Search..." name="search" value="{{request('search')}}">
 				  <button class="btn btn-warning btn-md" type="submit">Search</button>
@@ -35,7 +41,12 @@
 			<img src="https://source.unsplash.com/1440x480/?{{$posts[0]->category->name}}" class="card-img-top pt-3" alt="">
 			<div class="card-body text-center">
 				<h3 class="card-title">{{$posts[0]->title}}</h3>
-				<p>Author : <a href="/authors/{{$posts[0]->author->username}}" class="text-decoration-none">{{$posts[0]->author->name}}</a> in <small class="text-muted">{{$posts[0]->created_at->diffForHumans()}}</small> </p>
+				<p>Author : 
+					<a href="/authors/{{$posts[0]->author->username}}" class="text-decoration-none">{{$posts[0]->author->name}}</a> 
+					in 
+					<a class="text-decoration-none" href="/?category={{$posts[0]->category->slug}}" >{{$posts[0]->category->name}}</a>
+					<small class="text-muted">{{$posts[0]->created_at->diffForHumans()}}</small> 
+				</p>
 				<p class="card-text">{{$posts[0]->excerpt}}</p>
 
 				<a href="/article/{{$posts[0]->slug}}" class="btn btn-primary "><i>Read more</i></a>	
@@ -48,7 +59,7 @@
 				<div class="col-md-4">
 					<div class="card rounded-2 shadow-md mb-3">
 						<div class="card-body">
-							<div class="position-absolute px-3 py-2 bg-warning"><a class="text-decoration-none text-white" href="/categories/{{$post->category->slug}}">{{$post->category->name}}</a></div>
+							<div class="position-absolute px-3 py-2 bg-warning"><a class="text-decoration-none text-white" href="/?category={{$post->category->slug}}">{{$post->category->name}}</a></div>
 							<img src="https://source.unsplash.com/1080x720/?{{$post->category->name}}" class="card-img-top" >
 							<!-- <div class="text-center">
 								<img src="{{Storage::url('public/blogs/').$post->image}}" class="rounded" width="300">
