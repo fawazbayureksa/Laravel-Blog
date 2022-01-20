@@ -17,13 +17,17 @@ class PostController extends Controller
         // $posts = Post::with(['author','category'])->latest()->get();
         $posts = Post::latest()->get();
 
+        $title = 'Semua Artikel';
+
+        $active = 'beranda';
+ 
         // $posts = Post::with(['author','category'])->paginate(9);
 
         // "title" => "Semua Artikel"
        // Menampilkan data dari yang terbaru
         // $posts = Post::latest()->get();
 
-    	return view('frontend/sub/article',['posts' => $posts , 'title' => 'Semua Artikel','active' => 'beranda']);
+    	return view('frontend/sub/article',['posts' => $posts , 'title' => $title,'active' => $active]);
     }
 
     public function tampil(){
@@ -41,7 +45,7 @@ class PostController extends Controller
     // Route Model Binding 
     public function show(Post $post)
     {
-    	return view('frontend/sub/content',['post' => $post]);
+    	return view('frontend/sub/content',['post' => $post, 'active' => 'beranda']);
     }
 
 }
