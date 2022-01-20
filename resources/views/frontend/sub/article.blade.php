@@ -4,19 +4,35 @@
 
 @section('content')
 @include('components._jumbotron')
+
+@if($posts->count())
+
 <div class="container">
-	<div class="text py-3">
-		<div class="display-6 container">
-			{{$title}}
+	<div class="row">
+		<div class="col-md-7">
+			<div class="text py-3">
+				<div class="fs-2 container">
+					{{$title}}
+				</div>
+			</div>
+		</div>
+		<div class="col-md-5 mt-4">
+			<form action="/" method="get">
+				<div class="input-group mb-3">
+				  <input type="text" class="form-control" placeholder="Search..." name="search" value="{{request('search')}}">
+				  <button class="btn btn-warning btn-md" type="submit">Search</button>
+				</div>
+			</form>
 		</div>
 	</div>
+
 
 
 	<div class="row justify-content-start">	
 		<div class="card mb-3">
 			<!-- <div class="position-absolute px-3 py-2 bg-warning"><a class="text-decoration-none text-white" href="/categories/{{$posts[0]->category->slug}}">{{$posts[0]->category->name}}</a></div>
  -->
-			<img src="https://source.unsplash.com/1200x720/?{{$posts[0]->category->name}}" class="card-img-top py-3" alt="">
+			<img src="https://source.unsplash.com/1440x480/?{{$posts[0]->category->name}}" class="card-img-top pt-3" alt="">
 			<div class="card-body text-center">
 				<h3 class="card-title">{{$posts[0]->title}}</h3>
 				<p>Author : <a href="/authors/{{$posts[0]->author->username}}" class="text-decoration-none">{{$posts[0]->author->name}}</a> in <small class="text-muted">{{$posts[0]->created_at->diffForHumans()}}</small> </p>
@@ -26,7 +42,7 @@
 			</div>
 		</div>
 
-		@if($posts->count())
+		
 		<!-- fungsi method skip(1) digunakan untuk menlwatkan postingan pertama atau posts[0] -->
 			@foreach($posts->skip(1) as $post)
 				<div class="col-md-4">
@@ -49,7 +65,7 @@
 			<p class="fs-4 text-center">Content Not Found</p>
 		@endif
 
-		<a href="/">Semua Postingan</a>
+		<!-- <href="/">Semua Postingan</a> -->
 	</div>
 </div>
 @endsection

@@ -27,4 +27,20 @@ class Post extends Model
     	// satu postingan hanya bisa dimiliki satu user
     	return $this->belongsTo(User::class,'user_id');
     }
+
+    // fungsi cari di models menggunakan fiture scope yang dimiliki eloquent / laravel
+    public function scopeFilter($query, array $filters)
+    {   
+
+        // Cara 1
+
+        // if (isset($filters['search']) ? $filters['search'] : false); 
+        // {
+        //     //jika ada title seperti yang dicari , atau ada di dalam body
+        // return $query->where('title','like','%'.$filters['search'].'%') 
+        //              ->orWhere('body','like','%'.$filters['search'].'%'); 
+        // }
+
+        // Cara 2 , agar memudahkan saat mencari data berdasarkan kategori
+    }
 }

@@ -36,3 +36,4 @@ Route::get('authors/{author:username}', function(User $author){
 });
 
 Route::get('/categories','CategoryController@index');
+
