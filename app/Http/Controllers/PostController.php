@@ -18,7 +18,7 @@ class PostController extends Controller
         //with() digunakan menampilkan data dengan meningkatkan keoptimalan ketika melakukan relasi menggunakan fitur laravel eager loading,diurut sesuai data yang terbaru , tapi karena di models sudah di relasikan  maka di controller tidak perlu di relasikan lagi dengan with()
         // $posts = Post::with(['author','category'])->latest()->get();
 
-        $posts = Post::latest()->filter(request(['search','category','author']))->get();
+        $posts = Post::latest()->filter(request(['search','category','author']))->paginate(7)->withQueryString();
 
         // deklarasi title
         $title = '';
