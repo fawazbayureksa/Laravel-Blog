@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Post;
+use App\Models\user;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -16,9 +18,26 @@ class PostController extends Controller
         //with() digunakan menampilkan data dengan meningkatkan keoptimalan ketika melakukan relasi menggunakan fitur laravel eager loading,diurut sesuai data yang terbaru , tapi karena di models sudah di relasikan  maka di controller tidak perlu di relasikan lagi dengan with()
         // $posts = Post::with(['author','category'])->latest()->get();
 
-        $posts = Post::latest()->filter(request(['search','category']))->get();
+        $posts = Post::latest()->filter(request(['search','category','author']))->get();
 
-        $title = 'Semua Artikel';
+        // deklarasi title
+        $title = '';
+
+        if (request('category')) {
+            // jika ada pencarian category , cari slug yang mirip dengan request category
+            $category = Category::firstWhere('slug' , request('category'));
+            $title = 'All Article in '.$category->name;
+        }
+
+        else if(request('author')) {
+
+            $author = User::firstWhere('username',request('author'));
+            $title = 'All Article by '. $author->name;
+        }
+        else{
+
+            $title = 'All Article';
+        }
 
         $active = 'beranda';
  

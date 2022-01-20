@@ -21,6 +21,9 @@
 				<!-- jika saat mencari ada category=.. buat input type hiden , untuk menyisipkan search saat berada di halaman category-->
 				@if(request('category'))
 					<input type="hidden" name="category" value="{{request('category')}}">
+				@endif	
+				@if(request('author'))
+					<input type="hidden" name="author" value="{{request('author')}}">
 				@endif
 
 
@@ -42,7 +45,7 @@
 			<div class="card-body text-center">
 				<h3 class="card-title">{{$posts[0]->title}}</h3>
 				<p>Author : 
-					<a href="/authors/{{$posts[0]->author->username}}" class="text-decoration-none">{{$posts[0]->author->name}}</a> 
+					<a href="/?author={{$posts[0]->author->username}}" class="text-decoration-none">{{$posts[0]->author->name}}</a> 
 					in 
 					<a class="text-decoration-none" href="/?category={{$posts[0]->category->slug}}" >{{$posts[0]->category->name}}</a>
 					<small class="text-muted">{{$posts[0]->created_at->diffForHumans()}}</small> 
@@ -65,7 +68,7 @@
 								<img src="{{Storage::url('public/blogs/').$post->image}}" class="rounded" width="300">
 							</div> -->
 							<h3>{{$post->title}}</h3>
-							<p>Author : <a href="/authors/{{$post->author->username}}" class="text-decoration-none">{{$post->author->name}}</a> in <small class="text-muted">{{$posts[0]->created_at->diffForHumans()}}</small> </p>
+							<p>Author : <a href="/?author={{$post->author->username}}" class="text-decoration-none">{{$post->author->name}}</a> in <small class="text-muted">{{$posts[0]->created_at->diffForHumans()}}</small> </p>
 							{{$post->excerpt}}
 							<a href="/article/{{$post->slug}}" class="text-decoration-none"><i>Read more</i></a>	
 						</div>

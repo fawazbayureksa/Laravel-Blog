@@ -52,5 +52,11 @@ class Post extends Model
                 $query->where('slug',$category);
             });
         });
+        $query->when($filters['author'] ?? false,function($query, $author){
+            // author di whereHas diambil dari relasi di atas
+            return $query->whereHas('author', function($query) use ($author) {
+                $query->where('username',$author);
+            });
+        });
     }
 }

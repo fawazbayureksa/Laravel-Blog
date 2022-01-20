@@ -9,7 +9,7 @@
 				<div class="card-body">
 					
 					<h3>{{$post->title}}</h3>
-					<p>Author : <a href="#" class="text-decoration-none">{{$post->author->name}}</a>  in <a class="text-decoration-none" href="/categories/{{$post->category->slug}}" >{{$post->category->name}}</a> </p>
+					<p>Author : <a href="/?author=" class="text-decoration-none">{{$post->author->name}}</a>  in <a class="text-decoration-none" href="/?category={{$post->category->slug}}" >{{$post->category->name}}</a> </p>
 					<img src="https://source.unsplash.com/1080x720/?{{$post->category->name}}" class="card-img-top py-3" alt="">
 					<p>
 						{!!$post->body!!}
