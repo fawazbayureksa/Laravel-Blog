@@ -23,7 +23,9 @@ use App\Models\User;
 Route::get('/','PostController@index');
 Route::get('/article/{post:slug}','PostController@show');
 Route::get('/blog', 'PostController@tampil');
-
+Route::get('/login', function(){
+	return view('login/login');
+});
 
 // ---- tidak digunakan karena sudah di handle oleh fitur scopefilter di Models/Post
 
