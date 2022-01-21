@@ -21,11 +21,14 @@ use App\Models\User;
 // route tersebut sudah complete, mulai dari index, create, store, edit, pdate dan destroy
 // Route::resource('blog',BlogController::class);
 Route::get('/','PostController@index');
+
 Route::get('/article/{post:slug}','PostController@show');
+
 Route::get('/blog', 'PostController@tampil');
-Route::get('/login', function(){
-	return view('login/login');
-});
+
+Route::get('/login', 'LoginController@index');
+
+Route::get('/register', 'RegisterController@index');
 
 // ---- tidak digunakan karena sudah di handle oleh fitur scopefilter di Models/Post
 

@@ -34,7 +34,7 @@
 		</div>
 
 	<div class="text-center mt-3">
-			<p class="bold">2022 - Fawwaz Bayureksa</p>
+			<p class="bold">&copy; 2022 - Fawwaz Bayureksa</p>
 	</div>
 
 	</div>
