@@ -30,6 +30,9 @@ Route::get('/login', 'LoginController@index');
 
 Route::get('/register', 'RegisterController@index');
 
+Route::post('/register', 'RegisterController@store');
+
+
 // ---- tidak digunakan karena sudah di handle oleh fitur scopefilter di Models/Post
 
 //Contoh Route Model Binding

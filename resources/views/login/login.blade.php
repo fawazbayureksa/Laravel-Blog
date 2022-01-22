@@ -15,6 +15,13 @@
 <body>
 	<div class="container mt-5">
 		<div class="row justify-content-center">
+			<!-- jika di dalam session memiliki key dengan nama status dari register controller -->
+			@if(session()->has('status'))
+			<div class="alert alert-success alert-dismissible fade show" role="alert">
+				<strong>{{session('status')}}</strong>
+				<button type="button" class="btn-close" data-bs-dissmiss="alert"></button>
+			</div>
+			@endif
 			<h1 class="fs-2 text-center">REXXCODE</h1>
 			<div class="col-md-6 col-sm-8 col-lg-4">
 				<div class="card rounded-2 shadow-md pb-5 px-3">
