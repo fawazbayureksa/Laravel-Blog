@@ -1,11 +1,19 @@
-@extends('frontend.fe_template')
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Login - REXXCODE-Share Anything You Know</title>
+	<link rel="stylesheet" type="text/css" href="{{asset('fontawesome/css/all.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('fontawesome/css/solid.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('style/bootstrap/dist/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('style/style.css')}}">
+</head>
 
-@section('title','Login-REXXCODE - Share Anything You Know');
-
-
-@section('content')
 <body>
-	<div class="container mt-4">
+	<div class="container mt-5">
 		<div class="row justify-content-center">
 			<h1 class="fs-2 text-center">REXXCODE</h1>
 			<div class="col-md-6 col-sm-8 col-lg-4">
@@ -31,10 +39,16 @@
 							<a href="/register" class="text-decoration-none">Register</a>
 						</div>
 					</div>
+					<div class="text-center">
+						<a href="/" class="text-decoration-none">Beranda</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="{{asset('style/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+	<script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
 </body>
 </html>
-@endsection
