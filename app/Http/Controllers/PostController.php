@@ -65,7 +65,7 @@ class PostController extends Controller
 
         // Menampilkan data sesuai jumlah yang diminta
     	// $posts = Post::paginate(10);
-        $posts = Post::with(['category','author'])->latest()->get();
+        $posts = Post::with(['category','author'])->paginate(5);
 
         return view('blog/index',['posts' => $posts , 'active' => 'user']);
 

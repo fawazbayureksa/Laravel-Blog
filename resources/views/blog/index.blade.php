@@ -16,37 +16,33 @@
 				<table class="table table-bordered">
 					<thead>
 						<tr>
-							<!-- Blog Controller -->
-							<!-- <th>Gambar</th>
-							<th>Judul</th>
-							<th>Content</th>
-							<th>Act</th> -->
-							<!-- Post Controller -->
-							<th>No</th>
 							<th>Title</th>
 							<th>Slug</th>
 							<th>Experct</th>
 							<th>Body</th>
-							<th>Act</th>
 						</tr>
 					</thead>
 					<tbody>
 						@forelse($posts as $post)
 						<tr>
-							<td>{{$loop->iteration}}</td>
+							<!-- <td>{{$loop->iteration}}</td> -->
 							<td>{{ $post->title }}</td>
 							<td>{{ $post->slug }}</td>
-                            <td>{!! $post->excerpt !!}</td>
-                            <td>{!! $post->body !!}</td>
+              <td>{!! $post->excerpt !!}</td>
+              <td>{!! $post->body !!}</td>
                          
 						</tr>
 						   @empty
-                          <div class="alert alert-danger">
-                              Data Blog belum Tersedia.
-                          </div>
-                      @endforelse
+              <div class="alert alert-danger">
+                    Data Blog belum Tersedia.
+              </div>
+              @endforelse
+								<!-- link menampilkan halaman -->
 					</tbody>
 				</table>
+							<div class="d-flex justify-content-end">
+								{{$posts->links()}}
+							</div>
 			</div>
 		</div>
 

@@ -26,11 +26,11 @@
 			    </li>
 			</ul>
 			<ul class="navbar-nav ms-auto">
-			    <li class="nav-item">
-					<a href="/blog" class="nav-link {{($active === 'user' ) ? 'active' : ''}}" aria-current="page"><i class="fas fa-user"></i> User</a>					
+			   <!--  <li class="nav-item">
+					<a href="/blog" class="btn btn-default {{($active === 'user' ) ? 'active' : ''}}" aria-current="page"><i class="fas fa-user"></i> User</a>					
 			    </li>
-			    <li class="nav-item">
-					<a href="/login" class="nav-link {{($active === 'login' ) ? 'active' : ''}}" aria-current="page"><i class="fas fa-arrow-right"></i> Login</a>
+			    <li class="nav-item"> -->
+					<a href="/login" class="btn btn-primary {{($active === 'login' ) ? 'active' : ''}}" aria-current="page"><i class="fas fa-sign-in-alt"></i> Login</a>
 			    </li>
 			</ul>
 		</div>

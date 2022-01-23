@@ -28,6 +28,8 @@ Route::get('/blog', 'PostController@tampil');
 
 Route::get('/login', 'LoginController@index');
 
+Route::post('/login', 'LoginController@authenticate');
+
 Route::get('/register', 'RegisterController@index');
 
 Route::post('/register', 'RegisterController@store');

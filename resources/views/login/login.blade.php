@@ -15,27 +15,42 @@
 <body>
 	<div class="container mt-5">
 		<div class="row justify-content-center">
+
 			<!-- jika di dalam session memiliki key dengan nama status dari register controller -->
 			@if(session()->has('status'))
 			<div class="alert alert-success alert-dismissible fade show" role="alert">
 				<strong>{{session('status')}}</strong>
-				<button type="button" class="btn-close" data-bs-dissmiss="alert"></button>
+				<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 			</div>
 			@endif
+
+			@if(session()->has('loginError'))
+			<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				<strong>{{session('loginError')}}</strong>
+				<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+			</div>
+			@endif
+
 			<h1 class="fs-2 text-center">REXXCODE</h1>
 			<div class="col-md-6 col-sm-8 col-lg-4">
 				<div class="card rounded-2 shadow-md pb-5 px-3">
 					<div class="card-body text-center">
 						<h3 class="fs-4 mb-3">Sign In to Rexxcode</h3>
 						<hr>
-						<form action="">
+						<form action="/login" method="POST">
+							@csrf
 							<div class="input-group mb-3">
 								  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-								  <input type="text" class="form-control" class="form-control" placeholder="Email ...">
+								  <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" class="form-control" value="{{old('email')}}" placeholder="Email ..." autofocus>
+								  @error('email')
+								  	<div class="invalid-feedback">
+								  		{{$message}}
+								  	</div>
+								  @enderror
 							</div>
 							<div class="input-group mb-3">
 								  <span class="input-group-text"><i class="fas fa-lock"></i></span>
-								  <input type="password" class="form-control" class="form-control" placeholder="Password ...">
+								  <input type="password" name="password" class="form-control" class="form-control" placeholder="Password ...">
 							</div>
 							<div class="row my-4">
 								<button class="btn btn-primary btn-md text-white" type="submit">Login</button>
