@@ -57,11 +57,16 @@ contoh
 created_at->diffForHumans()
 ```
 
-fungsi method skip(1) digunakan untuk menlwatkan postingan pertama atau posts[0]
+fungsi method skip(1) digunakan untuk melewatkan postingan pertama atau posts[0]
 
 ```
 $..->skip() as $..
 ```
+
+Mengubah halaman default Route dari Home.
+
+-App\Providers\RouteService\Provider.php 
+
 
 ## License
 
