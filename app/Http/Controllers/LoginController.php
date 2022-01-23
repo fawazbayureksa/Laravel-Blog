@@ -23,7 +23,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
 
             // jika auth berhasil maka , intended berarti sebelum login maka melakukan auth middleware terlebih dahulu
-            return redirect()->intended('/blog');
+            return redirect()->intended('/dashboard');
         }
 
         // jika auth gagal

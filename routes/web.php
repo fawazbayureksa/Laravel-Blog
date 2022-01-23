@@ -24,7 +24,7 @@ Route::get('/','PostController@index');
 
 Route::get('/article/{post:slug}','PostController@show');
 
-Route::get('/blog', 'PostController@tampil');
+// Route::get('/blog', 'PostController@tampil');
 
 Route::get('/login', 'LoginController@index');
 
@@ -33,6 +33,8 @@ Route::post('/login', 'LoginController@authenticate');
 Route::get('/register', 'RegisterController@index');
 
 Route::post('/register', 'RegisterController@store');
+
+Route::get('/dashboard','DashboardController@index');
 
 
 // ---- tidak digunakan karena sudah di handle oleh fitur scopefilter di Models/Post

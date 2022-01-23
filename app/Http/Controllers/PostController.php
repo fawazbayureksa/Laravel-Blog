@@ -58,18 +58,6 @@ class PostController extends Controller
         );
     }
 
-    public function tampil(){
-        
-        // untuk menampilkan semua data
-        // $posts = Post::all();
-
-        // Menampilkan data sesuai jumlah yang diminta
-    	// $posts = Post::paginate(10);
-        $posts = Post::with(['category','author'])->paginate(5);
-
-        return view('blog/index',['posts' => $posts , 'active' => 'user']);
-
-    }
     // Route Model Binding 
     public function show(Post $post)
     {
