@@ -26,12 +26,36 @@
 			    </li>
 			</ul>
 			<ul class="navbar-nav ms-auto">
-			   <!--  <li class="nav-item">
+<!-- 			    <li class="nav-item">
 					<a href="/blog" class="btn btn-default {{($active === 'user' ) ? 'active' : ''}}" aria-current="page"><i class="fas fa-user"></i> User</a>					
-			    </li>
-			    <li class="nav-item"> -->
+			    </li> -->
+
+		    	@auth
+			    <!-- jika sudah login maka tampilkan -->
+			     <li class="nav-item dropdown">
+		          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Welcome Back, {{auth()->user()->name}}
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		            <li><a class="dropdown-item" href="/dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li> 
+		            <li><a class="dropdown-item" href="/dashboard"><i class="fas fa-user"></i> Profil</a></li>
+		            <li><hr class="dropdown-divider"></li>
+		            <form action="/logout" method="POST">
+		            	@csrf
+		            	<button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</button>
+		            </form>
+		          </ul>
+		        </li>
+			    @else
+			    <!-- jika belum login maka tampilkan -->
+			    <li class="nav-item mx-2">
 					<a href="/login" class="btn btn-primary {{($active === 'login' ) ? 'active' : ''}}" aria-current="page"><i class="fas fa-sign-in-alt"></i> Login</a>
 			    </li>
+			    <li class="nav-item">
+					<a href="/register" class="text-white btn btn-outline-success	" aria-current="page"></i>Register</a>
+			    </li>
+			    @endauth
+
 			</ul>
 		</div>
 	</div>

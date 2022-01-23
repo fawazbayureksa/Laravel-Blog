@@ -26,15 +26,19 @@ Route::get('/article/{post:slug}','PostController@show');
 
 // Route::get('/blog', 'PostController@tampil');
 
-Route::get('/login', 'LoginController@index');
+// halaman login hanya bisa di akses oleh yang belum login 
+// name('login') untuk mengatasi login not found jika mengakses dashboard tanpa login
+Route::get('/login', 'LoginController@index')->middleware('guest')->name('login');
 
 Route::post('/login', 'LoginController@authenticate');
+
+Route::post('/logout', 'LoginController@logout');
 
 Route::get('/register', 'RegisterController@index');
 
 Route::post('/register', 'RegisterController@store');
 
-Route::get('/dashboard','DashboardController@index');
+Route::get('/dashboard','DashboardController@index')->middleware('auth');
 
 
 // ---- tidak digunakan karena sudah di handle oleh fitur scopefilter di Models/Post

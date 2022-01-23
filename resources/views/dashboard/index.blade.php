@@ -2,7 +2,7 @@
 @extends('template')
 
 
-@section('title','REXX CODE - Content')
+@section('title','REXX CODE - Dashboard')
 
 
 @section('content')
