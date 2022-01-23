@@ -15,6 +15,6 @@ class DashboardController extends Controller
         // $posts = Post::paginate(10);
         $posts = Post::with(['category','author'])->paginate(5);
 
-        return view('blog/index',['posts' => $posts , 'active' => 'user']);
+        return view('dashboard/index',['posts' => $posts , 'active' => 'user']);
     }
 }
