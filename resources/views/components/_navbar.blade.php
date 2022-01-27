@@ -19,10 +19,10 @@
 					<a href="/" class="nav-link {{($active === 'beranda' ) ? 'active' : ''}}" aria-current="page">Beranda</a>	
 			    </li class="nav-item">
 			    <li>
-					<a href="#" class="nav-link " aria-current="page">About</a>					
+					<a href="#" class="nav-link " aria-current="page">Tentang</a>					
 			    </li>
 			    <li class="nav-item">
-					<a href="/categories" class="nav-link {{($active === 'category' ) ? 'active' : ''}}" aria-current="page">Category</a>					
+					<a href="/categories" class="nav-link {{($active === 'category' ) ? 'active' : ''}}" aria-current="page">Kategori</a>					
 			    </li>
 			</ul>
 			<ul class="navbar-nav ms-auto">
@@ -34,7 +34,7 @@
 			    <!-- jika sudah login maka tampilkan -->
 			     <li class="nav-item dropdown">
 		          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-		            Welcome Back, {{auth()->user()->name}}
+		            Selamat Datang, {{auth()->user()->name}}
 		          </a>
 		          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 		            <li><a class="dropdown-item" href="/dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li> 
