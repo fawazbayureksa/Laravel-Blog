@@ -16,13 +16,35 @@ use App\Models\User;
 */
 
 
+// FRONTEND
 
-// Resouece memudah kan untuk membuat CRUD ketika menggunakan route
+// Resource memudah kan untuk membuat CRUD ketika menggunakan route
 // route tersebut sudah complete, mulai dari index, create, store, edit, pdate dan destroy
 // Route::resource('blog',BlogController::class);
+
 Route::get('/','PostController@index');
 
 Route::get('/article/{post:slug}','PostController@show');
+
+Route::get('/categories','CategoryController@index');
+
+// ---- tidak digunakan karena sudah di handle oleh fitur scopefilter di Models/Post
+
+//Contoh Route Model Binding
+// Route::get('categories/{category:slug}','CategoryController@show');
+// // Route Model Binding
+// Route::get('authors/{author:username}', function(User $author){
+// 	return view('frontend/sub/article', [
+// 		'title' => "Postingan dari penulis : $author->name",
+// 		// load() merupakan fitur dari lazy eager loading dan digunakan di situasi seperti saat menggunakan route model binding
+// 		'posts' => $author->posts->load('category','author'),
+// 	]);
+// });
+
+// ----
+
+
+// BACKEND
 
 // Route::get('/blog', 'PostController@tampil');
 
@@ -40,21 +62,4 @@ Route::post('/register', 'RegisterController@store');
 
 Route::get('/dashboard','DashboardController@index')->middleware('auth');
 
-
-// ---- tidak digunakan karena sudah di handle oleh fitur scopefilter di Models/Post
-
-//Contoh Route Model Binding
-// Route::get('categories/{category:slug}','CategoryController@show');
-// // Route Model Binding
-// Route::get('authors/{author:username}', function(User $author){
-// 	return view('frontend/sub/article', [
-// 		'title' => "Postingan dari penulis : $author->name",
-// 		// load() merupakan fitur dari lazy eager loading dan digunakan di situasi seperti saat menggunakan route model binding
-// 		'posts' => $author->posts->load('category','author'),
-// 	]);
-// });
-
-// ----
-
-Route::get('/categories','CategoryController@index');
-
+Route::resource('dashboard/artikel', 'DbPostController')->middleware('auth');

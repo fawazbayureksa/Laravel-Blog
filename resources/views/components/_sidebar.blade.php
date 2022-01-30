@@ -2,13 +2,15 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link	" aria-current="page" href="#">
+            <!-- {{Request::is('dashboard') ? 'active' : '' }} cara baca: jika ada request yang URL nya adalah dashboard maka add active else: kosong -->
+            <a class="nav-link {{Request::is('dashboard') ? 'active' : '' }}" aria-current="page" href="/dashboard">
               <i class="fas fa-home"></i>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+
+            <a class="nav-link {{Request::is('dashboard/artikel') ? 'active' : '' }}" href="/dashboard/artikel">
               <i class="fas fa-book-open"></i>
               Artikel
             </a>
