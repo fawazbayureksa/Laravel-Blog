@@ -1,4 +1,10 @@
-   <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+   <style>
+     nav{
+      background-color: lightgray;
+     }
+   </style>
+
+   <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -10,7 +16,7 @@
           </li>
           <li class="nav-item">
 
-            <a class="nav-link {{Request::is('dashboard/artikel') ? 'active' : '' }}" href="/dashboard/artikel">
+            <a class="nav-link" href="/dashboard/artikel">
               <i class="fas fa-book-open"></i>
               Artikel
             </a>

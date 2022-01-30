@@ -60,6 +60,12 @@ Route::get('/register', 'RegisterController@index');
 
 Route::post('/register', 'RegisterController@store');
 
-Route::get('/dashboard','DashboardController@index')->middleware('auth');
+Route::get('/dashboard',function() {
+		return view('dashboard/index');
+	})->middleware('auth');
 
-Route::resource('dashboard/artikel', 'DbPostController')->middleware('auth');
+// Route::resource('/dashboard/artikel', 'DbpostController')->middleware('auth');
+
+Route::resource('/dashboard/artikel', 'DbpostController')->middleware('auth');
+
+// Route::resource('dashboard/artikel/{post:slug}', 'DbPostController@show')->middleware('auth');

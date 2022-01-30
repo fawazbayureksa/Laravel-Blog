@@ -28,6 +28,11 @@ class Post extends Model
     	return $this->belongsTo(User::class,'user_id');
     }
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     // fungsi cari di models menggunakan fiture scope yang dimiliki eloquent / laravel
     public function scopeFilter($query, array $filters)
     {   

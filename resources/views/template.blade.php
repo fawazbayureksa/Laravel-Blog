@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('style/dashboard.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('style/style.css')}}">
 </head>
-<body>
+<body style="background-color: #fff;">
 	
 @include('components._header')
 

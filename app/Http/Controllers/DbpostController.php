@@ -14,8 +14,9 @@ class DbpostController extends Controller
      */
     public function index()
     {
-        //
-        return view('dashboard/post/index');
+        //tampilkan data post yang user id nya or penulisnya sama dengan user id yang yang lagi login
+        $post = Post::where('user_id',auth()->user()->id)->get();
+        return view('dashboard.post.index',['posts' => $post]);
     }
 
     /**
@@ -47,7 +48,10 @@ class DbpostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+
+        return $post;
+        // return view('dashboard.post.detail');
+
     }
 
     /**
