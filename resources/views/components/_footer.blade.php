@@ -6,18 +6,18 @@
 	}
 	.bold{
 		font-weight: bold;
-		color: #444;
+		color: #666;
 	}
 	 i.fab {
       font-size: 2em;
-      color: #444;
+      color: #666;
       margin-right:10px;
     }
     i.fab:hover{
     	color: white;
     }
 </style>
-<div class="footer bg-warning">
+<div class="footer bg-dark">
 	<div class="container">
 		<div class="row text-white">
 			<div class="col-md-5">
