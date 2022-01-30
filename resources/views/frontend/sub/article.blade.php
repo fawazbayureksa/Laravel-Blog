@@ -29,7 +29,7 @@
 
 				<div class="input-group mb-3">
 				  <input type="text" class="form-control" placeholder="Search..." name="search" value="{{request('search')}}">
-				  <button class="btn btn-warning btn-md" type="submit">Search</button>
+				  <button class="btn btn-primary btn-md" type="submit">Search</button>
 				</div>
 			</form>
 		</div>
@@ -62,7 +62,7 @@
 				<div class="col-md-4">
 					<div class="card rounded-2 shadow-md mb-3">
 						<div class="card-body">
-							<div class="position-absolute px-3 py-2 bg-warning"><a class="text-decoration-none text-white" href="/?category={{$post->category->slug}}">{{$post->category->name}}</a></div>
+							<div class="position-absolute px-3 py-2 bg-dark"><a class="text-decoration-none text-white" href="/?category={{$post->category->slug}}">{{$post->category->name}}</a></div>
 							<img src="https://source.unsplash.com/1080x720/?{{$post->category->name}}" class="card-img-top" >
 							<!-- <div class="text-center">
 								<img src="{{Storage::url('public/blogs/').$post->image}}" class="rounded" width="300">
