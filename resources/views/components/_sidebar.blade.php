@@ -1,16 +1,45 @@
-
-
-
-<div class="card border-0 rounded shadow-lg">
-	<div class="card-body">
-		<div class="h3">
-			Main Menu
-		</div>
-		<div class="list-group">
-		    <a href="#" class="list-group-item list-group-item-action">DASHBOARD</a>
-		    <a href="" class="list-group-item list-group-item-action">ARTIKEL</a>
-		    <a href="#" class="list-group-item list-group-item-action">PROFIL</a>
-		    <a href="#" class="list-group-item list-group-item-action">KELUAR</a>
-		</div>
-	</div>
-</div>
+   <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link	" aria-current="page" href="#">
+              <i class="fas fa-home"></i>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-book-open"></i>
+              Artikel
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-user-edit"></i>
+              Penulis
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-project-diagram"></i>
+              Kategori
+            </a>
+          </li>
+        </ul>
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span class="fas fa-cog"> Pengaturan</span>
+          <a class="link-secondary" href="#" aria-label="Add a new report">
+            <span data-feather="plus-circle"></span>
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              <i class="fas fa-user"></i>
+              Profil
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
