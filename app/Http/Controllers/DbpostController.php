@@ -27,6 +27,7 @@ class DbpostController extends Controller
     public function create()
     {
         //
+        return view('dashboard.post.create');
     }
 
     /**
@@ -60,9 +61,11 @@ class DbpostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
         //
+        $post = Post::where('slug',$id)->first();
+        return view('dashboard.post.edit',compact('post'));
     }
 
     /**
@@ -83,8 +86,12 @@ class DbpostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        //
+        $post = Post::where('slug',$id)->first();
+
+        $post->delete();
+
+        return redirect()->route('artikel.index')->with('success','Data berhasil dihapus');
     }
 }

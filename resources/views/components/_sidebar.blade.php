@@ -16,7 +16,7 @@
           </li>
           <li class="nav-item">
 
-            <a class="nav-link" href="/dashboard/artikel">
+            <a class="nav-link {{Request::is('dashboard/artikel') ? 'active' : '' }}" href="/dashboard/artikel">
               <i class="fas fa-book-open"></i>
               Artikel
             </a>

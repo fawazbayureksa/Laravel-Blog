@@ -40,7 +40,7 @@
 	<script src="{{asset('style/dashboard.js')}}"></script>
 	<script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
 	<script>
-	    CKEDITOR.replace('content' );
+	    CKEDITOR.replace('body' );
 	</script>
 	<script src="">
 		@if(session()->has('success'))
