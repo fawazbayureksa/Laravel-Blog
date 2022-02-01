@@ -26,7 +26,7 @@
 				<td>{{ $post->title }}</td>
 	          	<td>{!! $post->category->name !!}</td>
 	          	<td>
-	          		<a href="artikel/{{$post->slug}}" class="btn btn-success btn-md"><i class="fas fa-eye"></i></a>
+	          		<a href="{{route('artikel.show',$post->slug)}}" class="btn btn-success btn-md"><i class="fas fa-eye"></i></a>
 	          		<a href="" class="btn btn-warning btn-md"><i class="fas fa-edit"></i></a>
 	          		<a href="" class="btn btn-danger btn-md"><i class="fas fa-times-circle"></i></a>
 	          	</td>

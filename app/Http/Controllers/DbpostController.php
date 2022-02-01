@@ -46,11 +46,11 @@ class DbpostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
 
-        return $post;
-        // return view('dashboard.post.detail');
+        $post = Post::where('slug',$id)->first();
+        return view('dashboard.post.detail',compact('post'));
 
     }
 
