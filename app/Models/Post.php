@@ -11,7 +11,7 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $guard = ['id'];
+    protected $guarded = ['id'];
 
     // agar di controller tidak harus di tulis kan Post::With([..]) untuk fungsi relasinya
     protected $with = ['category','author'];
