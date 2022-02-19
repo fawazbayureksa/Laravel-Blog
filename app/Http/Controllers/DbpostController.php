@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,8 @@ class DbpostController extends Controller
     public function create()
     {
         //
-        return view('dashboard.post.create');
+        $cat = Category::all();
+        return view('dashboard.post.create',compact('cat'));
     }
 
     /**
@@ -39,6 +41,15 @@ class DbpostController extends Controller
     public function store(Request $request)
     {
         //
+         Post::create([
+            'title' => $request->title,
+            'slug' => $request->slug,
+            'category_id' => $request->kategori,
+            'user_id' => $request->userid,
+            'excerpt' => $request->excerpt,
+            'body' => $request->body
+        ]);
+        return redirect()->route('artikel.index')->with('success','Artiekl berhasil di tambahkan');
     }
 
     /**
@@ -78,6 +89,15 @@ class DbpostController extends Controller
     public function update(Request $request, Post $post)
     {
         //
+        $post = Post::where('slug',$id)->first();
+        $post->title = $request->title;
+        $post->slug = $request->slug;
+        $post->excerpt = $request->excerpt;
+        $post->category_id = $request->kategori;
+        $post->body = $request->body;
+        $post->save();
+        return redirect()->route('artikel.index')->with('success','Artikel berhasil diubah');
+
     }
 
     /**
