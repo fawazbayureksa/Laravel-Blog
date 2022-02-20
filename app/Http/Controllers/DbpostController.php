@@ -75,8 +75,9 @@ class DbpostController extends Controller
     public function edit($id)
     {
         //
+        $cat = Category::all();
         $post = Post::where('slug',$id)->first();
-        return view('dashboard.post.edit',compact('post'));
+        return view('dashboard.post.edit',['cat' => $cat,'post' => $post]);
     }
 
     /**
